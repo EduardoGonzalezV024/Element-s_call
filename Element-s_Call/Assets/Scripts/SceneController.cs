@@ -1,35 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class SceneController : MonoBehaviour
 {
-    [SerializeField] GameObject spawnable;
+    private TouchController touchController;
 
-    public float minSecs, maxSecs, totalDuration, initialDelay;
-
-    void Start()
+    private void Awake()
     {
-        StartCoroutine(Event());
+        touchController = FindObjectOfType<TouchController>();
     }
-
-    private void Update()
+    public void Update()
     {
-        totalDuration -= Time.deltaTime;
-    }
+        if (touchController.touches.Length == 2)
+        {
+            if ((Mathf.Abs(touchController.touches[0].direction.normalized.y) < Mathf.Abs(touchController.touches[0].direction.normalized.x)) &&
+                (Mathf.Abs(touchController.touches[1].direction.normalized.y) < Mathf.Abs(touchController.touches[1].direction.normalized.x)) &&
+                touchController.touches[0].direction.x < -30 && touchController.touches[1].direction.x < -30)
+            {
+                int index = SceneManager.GetActiveScene().buildIndex;
 
-    IEnumerator Event()
-    {
-        yield return new WaitForSecondsRealtime(initialDelay);
+                if (index == 0) index = SceneManager.sceneCountInBuildSettings;
 
-        initialDelay = 0;
-
-        Instantiate(spawnable, this.transform);
-
-        float wait = Random.Range(minSecs, maxSecs);
-
-        yield return new WaitForSecondsRealtime(wait);
-
-        if(totalDuration > 0) StartCoroutine(Event());
+                SceneManager.LoadScene(index - 1);
+            }
+        }
     }
 }

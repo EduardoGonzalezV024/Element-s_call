@@ -5,19 +5,31 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody), typeof (BoxCollider), typeof (AudioSource))]
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private Rigidbody _rigidbody;
-    [SerializeField] private FloatingJoystick _joystick;
+    [SerializeField] private Rigidbody rb;
     [SerializeField] private AudioSource footsteps;
 
     [SerializeField] private float _moveSpeed;
 
+    private TouchController touchController;
+
+    private void Awake()
+    {
+        touchController = FindObjectOfType<TouchController>();
+    }
     private void FixedUpdate()
     {
-        _rigidbody.velocity = new Vector3(_joystick.Horizontal * _moveSpeed, _rigidbody.velocity.y, _joystick.Vertical * _moveSpeed);
+        Vector3 currentVector = new Vector3(0,0,0);
 
-        if (_joystick.Horizontal != 0 || _joystick.Vertical != 0)
+        if (touchController.touches.Length > 0)
         {
-            transform.rotation = Quaternion.LookRotation(_rigidbody.velocity);
+            currentVector = new Vector3(touchController.touches[0].direction.normalized.x * _moveSpeed, rb.velocity.y, touchController.touches[0].direction.normalized.y * _moveSpeed);
+        }
+
+        rb.velocity = currentVector;
+
+        if (currentVector.x != 0 || currentVector.y != 0)
+        {
+            transform.rotation = Quaternion.LookRotation(rb.velocity);
             if(!footsteps.isPlaying){
                 footsteps.Play();
             }

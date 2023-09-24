@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/EventTest.unity
-    guid: e2429121a429a274caff734d0a40a372
+    path: Assets/Scenes/DialogTest.unity
+    guid: 9f9d672d2258c8649985caa37713c4fa
   - enabled: 1
     path: Assets/Scenes/MovementTest.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/EventTest.unity
+    guid: e2429121a429a274caff734d0a40a372
   m_configObjects: {}

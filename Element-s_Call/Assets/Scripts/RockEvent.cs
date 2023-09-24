@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RockEvent : MonoBehaviour
 {
-    private DynamicJoystick joystick;
+    private TouchController touchController;
     public AudioClip actionSound;
     public AudioClip failSound;
     public float pos = 0;
@@ -14,7 +14,7 @@ public class RockEvent : MonoBehaviour
 
     void Awake()
     {
-        joystick = FindObjectOfType<DynamicJoystick>();
+        touchController = FindObjectOfType<TouchController>();
 
         while (pos == 0)
         {
@@ -32,14 +32,18 @@ public class RockEvent : MonoBehaviour
 
     public void Update()
     {
-        if (joystick.Horizontal != 0 && inputDelay < 0)
+        if (touchController.touches.Length > 0)
         {
-            inputDelay = 2;
-            GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>().PlayOneShot(actionSound);
+            if (Mathf.Abs(touchController.touches[0].direction.x) > 30 && 
+                (Mathf.Abs(touchController.touches[0].direction.normalized.y) < Mathf.Abs(touchController.touches[0].direction.normalized.x))
+                && inputDelay < 0)
+            {
+                inputDelay = 2;
+                GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>().PlayOneShot(actionSound);
 
-            passes = (joystick.Horizontal * pos) < 0;
+                passes = (touchController.touches[0].direction.x * pos) < 0;
+            }
         }
-
         inputDelay -= Time.deltaTime;
     }
 

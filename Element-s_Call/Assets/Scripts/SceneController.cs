@@ -19,12 +19,27 @@ public class SceneController : MonoBehaviour
                 (Mathf.Abs(touchController.touches[1].direction.normalized.y) < Mathf.Abs(touchController.touches[1].direction.normalized.x)) &&
                 touchController.touches[0].direction.x < -30 && touchController.touches[1].direction.x < -30)
             {
-                int index = SceneManager.GetActiveScene().buildIndex;
-
-                if (index == 0) index = SceneManager.sceneCountInBuildSettings;
-
-                SceneManager.LoadScene(index - 1);
+                prevScene();
             }
         }
     }
+
+    public void nextScene()
+    {
+        int index = SceneManager.GetActiveScene().buildIndex;
+
+        if (index == SceneManager.sceneCountInBuildSettings-1) index = -1;
+
+        SceneManager.LoadScene(index + 1);
+    }
+
+    public void prevScene()
+    {
+        int index = SceneManager.GetActiveScene().buildIndex;
+
+        if (index == 0) index = SceneManager.sceneCountInBuildSettings;
+
+        SceneManager.LoadScene(index - 1);
+    }
+
 }

@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using UnityEngine; 
 
 public class DialogController : MonoBehaviour
 {
     [SerializeField] private AudioSource[] characters;
     [SerializeField] private DialogClass[] audios;
+    [SerializeField] private bool dialogScene = true;
 
     private int cont = 0;
     private int characterIndex = 0;
@@ -46,7 +47,7 @@ public class DialogController : MonoBehaviour
         {
             Invoke("playDialog", (audios[cont - 1].duration + audios[cont].initialDelay));
         }
-        if (cont == audios.Length)
+        if (cont == audios.Length && dialogScene)
         {
             Invoke("end", audios[cont-1].duration);
         }

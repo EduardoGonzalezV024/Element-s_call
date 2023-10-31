@@ -15,7 +15,7 @@ public class EventController : MonoBehaviour
 
     private void Update()
     {
-        totalDuration -= Time.deltaTime;
+        if(initialDelay == 0)totalDuration -= Time.deltaTime;
     }
 
     IEnumerator Event()
@@ -31,5 +31,7 @@ public class EventController : MonoBehaviour
         yield return new WaitForSecondsRealtime(wait);
 
         if (totalDuration > 0) StartCoroutine(Event());
+
+        else FindObjectOfType<SceneController>().nextScene();
     }
 }

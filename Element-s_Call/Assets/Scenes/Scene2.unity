@@ -603,11 +603,11 @@ MonoBehaviour:
   audios:
   - clip: {fileID: 8300000, guid: ca9c5d145cae42c41b67edb612950d87, type: 3}
     characterIndex: 2
-    initialDelay: 1
+    initialDelay: 0
     duration: 0
   - clip: {fileID: 8300000, guid: 0f67c7c83052f434b8b85a3b3b06e50e, type: 3}
     characterIndex: 1
-    initialDelay: 0
+    initialDelay: -3
     duration: 0
   - clip: {fileID: 8300000, guid: 81db092086ee3de4882aceda3d313dfa, type: 3}
     characterIndex: 0
@@ -643,12 +643,18 @@ MonoBehaviour:
     duration: 0
   - clip: {fileID: 8300000, guid: 9743034a61b6a4042b0888f3f68355cc, type: 3}
     characterIndex: 2
-    initialDelay: -16
-    duration: 20
+    initialDelay: -2
+    duration: 6
   - clip: {fileID: 8300000, guid: e6192134e32fa854a9010b6206c49c2c, type: 3}
     characterIndex: 0
     initialDelay: -4
     duration: 0
+  - clip: {fileID: 8300000, guid: 9743034a61b6a4042b0888f3f68355cc, type: 3}
+    characterIndex: 2
+    initialDelay: 0
+    duration: 0
+  dialogScene: 1
+  debugIndex: 0
 --- !u!4 &790909291
 Transform:
   m_ObjectHideFlags: 0

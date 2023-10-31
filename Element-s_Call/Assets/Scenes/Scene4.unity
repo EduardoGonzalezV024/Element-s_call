@@ -296,7 +296,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 51482229}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.06, y: 0.83, z: -5.99}
+  m_LocalPosition: {x: -0.06, y: 0.83, z: -2.92}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -790,25 +790,30 @@ MonoBehaviour:
     duration: 0
   - clip: {fileID: 8300000, guid: cc5aa29af2ac006418f04a94a22d94fb, type: 3}
     characterIndex: 2
-    initialDelay: -2
+    initialDelay: -4
     duration: 0
   - clip: {fileID: 8300000, guid: 5f3a2d412e978424c9bdef878c8b99d4, type: 3}
     characterIndex: 1
-    initialDelay: -15
+    initialDelay: -14
+    duration: 0
+  - clip: {fileID: 8300000, guid: cc5aa29af2ac006418f04a94a22d94fb, type: 3}
+    characterIndex: 2
+    initialDelay: -3.5
     duration: 0
   - clip: {fileID: 8300000, guid: 6d4aaf8c055195e489e34d9b102c1950, type: 3}
     characterIndex: 4
-    initialDelay: 0
+    initialDelay: -15
     duration: 12
   - clip: {fileID: 8300000, guid: 0cd37a0e1f2eb3f4ca6b129f9daf66b8, type: 3}
     characterIndex: 3
-    initialDelay: -5
+    initialDelay: 0
     duration: 0
   - clip: {fileID: 8300000, guid: bb7f0cea7d5e1ec43a6f499947ac58a5, type: 3}
     characterIndex: 5
-    initialDelay: 0
+    initialDelay: -3
     duration: 0
   dialogScene: 1
+  debugIndex: 0
 --- !u!4 &790909291
 Transform:
   m_ObjectHideFlags: 0
@@ -996,8 +1001,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 891225116}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.29, y: 7.02, z: -5.48}
+  m_LocalRotation: {x: -0.0009013107, y: 0.007205802, z: -0.052243643, w: 0.998608}
+  m_LocalPosition: {x: 0.18, y: 2.74, z: -2.85}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

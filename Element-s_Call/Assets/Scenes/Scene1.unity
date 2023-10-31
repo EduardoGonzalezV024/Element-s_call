@@ -603,21 +603,21 @@ MonoBehaviour:
   - {fileID: 1203807226}
   - {fileID: 412730417}
   audios:
+  - clip: {fileID: 8300000, guid: 578d013d42ebd694f9eeb74c508053e5, type: 3}
+    characterIndex: 1
+    initialDelay: 1
+    duration: 28
   - clip: {fileID: 8300000, guid: 9985ae5ebf260424a910be9a70c2e6c7, type: 3}
     characterIndex: 0
-    initialDelay: 0
+    initialDelay: -22
     duration: 0
   - clip: {fileID: 8300000, guid: 6d4aaf8c055195e489e34d9b102c1950, type: 3}
     characterIndex: 2
     initialDelay: 0
     duration: 6
-  - clip: {fileID: 8300000, guid: 578d013d42ebd694f9eeb74c508053e5, type: 3}
-    characterIndex: 1
-    initialDelay: 1
-    duration: 18
   - clip: {fileID: 8300000, guid: 9f9daf58e9d164d41935a60f45e8a24d, type: 3}
     characterIndex: 0
-    initialDelay: -11
+    initialDelay: 0
     duration: 0
   - clip: {fileID: 8300000, guid: 6d4aaf8c055195e489e34d9b102c1950, type: 3}
     characterIndex: 2
@@ -635,6 +635,8 @@ MonoBehaviour:
     characterIndex: 3
     initialDelay: 0
     duration: 0
+  dialogScene: 1
+  debugIndex: 0
 --- !u!4 &790909291
 Transform:
   m_ObjectHideFlags: 0
@@ -1368,7 +1370,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1814144932}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.06, y: 3.56, z: -13.25}
+  m_LocalPosition: {x: 0, y: 5.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

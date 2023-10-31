@@ -7,6 +7,7 @@ public class DialogController : MonoBehaviour
     [SerializeField] private AudioSource[] characters;
     [SerializeField] private DialogClass[] audios;
     [SerializeField] private bool dialogScene = true;
+    [SerializeField] private int debugIndex = 0;
 
     private int cont = 0;
     private int characterIndex = 0;
@@ -14,6 +15,8 @@ public class DialogController : MonoBehaviour
 
     private void Awake()
     {
+        if (debugIndex != 0) cont = debugIndex;
+
         Invoke("playDialog", audios[cont].initialDelay);
 
         for(int i = 0; i < audios.Length; i++)

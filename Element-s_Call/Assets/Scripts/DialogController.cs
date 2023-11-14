@@ -8,6 +8,7 @@ public class DialogController : MonoBehaviour
     [SerializeField] private DialogClass[] audios;
     [SerializeField] private bool dialogScene = true;
     [SerializeField] private int debugIndex = 0;
+    [SerializeField] private DialogClass failSequence;
 
     private int cont = 0;
     private int characterIndex = 0;
@@ -23,6 +24,9 @@ public class DialogController : MonoBehaviour
         {
             if (audios[i].duration == 0) audios[i].duration = audios[i].clip.length;
         }
+
+        if (failSequence.clip && failSequence.duration == 0) failSequence.duration = failSequence.clip.length;
+
     }
 
     void playDialog()
@@ -78,5 +82,17 @@ public class DialogController : MonoBehaviour
     void end()
     {
         FindObjectOfType<SceneController>().nextScene();
+    }
+
+    public void failSq()
+    {
+        characters[failSequence.characterIndex].PlayOneShot(failSequence.clip);
+
+        Invoke("reload", failSequence.duration+1);
+    }
+
+    void reload()
+    {
+        FindObjectOfType<SceneController>().reloadScene();
     }
 }

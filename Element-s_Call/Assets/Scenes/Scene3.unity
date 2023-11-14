@@ -401,7 +401,7 @@ GameObject:
   - component: {fileID: 434908034}
   m_Layer: 0
   m_Name: Aeris
-  m_TagString: Untagged
+  m_TagString: Aeris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -601,11 +601,17 @@ MonoBehaviour:
   - {fileID: 434908034}
   - {fileID: 242384008}
   audios:
-  - clip: {fileID: 8300000, guid: ef39bca12068ca14dbb5d44562a15be5, type: 3}
+  - clip: {fileID: 8300000, guid: bc4530dc990971d4e9a6af3cad6056d3, type: 3}
     characterIndex: 1
     initialDelay: 0
     duration: 0
   dialogScene: 0
+  debugIndex: 0
+  failSequence:
+    clip: {fileID: 8300000, guid: e931184768fb2a74eaeea9e032b7dfe5, type: 3}
+    characterIndex: 1
+    initialDelay: 0
+    duration: 0
 --- !u!4 &803125526
 Transform:
   m_ObjectHideFlags: 0
@@ -1079,6 +1085,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1683968472}
   - component: {fileID: 1683968473}
+  - component: {fileID: 1683968474}
   m_Layer: 0
   m_Name: EventController
   m_TagString: Untagged
@@ -1117,7 +1124,26 @@ MonoBehaviour:
   minSecs: 6
   maxSecs: 9
   totalDuration: 40
-  initialDelay: 15
+  initialDelay: 13
+  failCont: 0
+  maxFails: 4
+--- !u!114 &1683968474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683968471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6098a30dbeccb6f49a956c4a46511ba0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionSound: {fileID: 8300000, guid: 41675da0725ff8347bb7cd8171a3a942, type: 3}
+  failSound: {fileID: 8300000, guid: ed1e074058704a74fa74ca88b704de79, type: 3}
+  initialDelay: 13
+  height: 20
+  downSp: 3
 --- !u!1 &1814123994
 GameObject:
   m_ObjectHideFlags: 0

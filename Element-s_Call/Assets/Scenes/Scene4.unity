@@ -792,7 +792,7 @@ MonoBehaviour:
     characterIndex: 2
     initialDelay: -4
     duration: 0
-  - clip: {fileID: 8300000, guid: 5f3a2d412e978424c9bdef878c8b99d4, type: 3}
+  - clip: {fileID: 8300000, guid: 02c4b9d0cf0b15e4e88142a863ef2366, type: 3}
     characterIndex: 1
     initialDelay: -14
     duration: 0

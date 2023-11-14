@@ -6,7 +6,8 @@ public class RockEvent : MonoBehaviour
 {
     private TouchController touchController;
     public AudioClip actionSound;
-    public AudioClip failSound;
+    public AudioClip[] failSounds;
+    public AudioClip[] successSounds;
     public float pos = 0;
 
     private float inputDelay = 0;
@@ -55,10 +56,21 @@ public class RockEvent : MonoBehaviour
         {
             Fail();
         }
+        else if(Random.Range(-1, 2) > 0)
+        {
+            GameObject.FindGameObjectWithTag("Aeris").GetComponent<AudioSource>().PlayOneShot(successSounds[(int)Random.Range(0, successSounds.Length)]);
+        }
     }
     public void Fail()
     {
-        GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>().PlayOneShot(failSound);
+        EventController cont = GameObject.FindObjectOfType<EventController>();
+
+        GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>().PlayOneShot(failSounds[0]);
+        if (cont.failCont > ((cont.maxFails / 3) * 2) && cont.failCont < cont.maxFails && Random.Range(-1, 2) > 0)
+        {
+            GameObject.FindGameObjectWithTag("Aeris").GetComponent<AudioSource>().PlayOneShot(failSounds[(int)Random.Range(1, failSounds.Length)]);
+        }
+        cont.Fail();
         Handheld.Vibrate();
     }
 }

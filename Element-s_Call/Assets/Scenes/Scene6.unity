@@ -581,7 +581,7 @@ GameObject:
   - component: {fileID: 434908034}
   m_Layer: 0
   m_Name: Aeris
-  m_TagString: Untagged
+  m_TagString: Aeris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -785,12 +785,17 @@ MonoBehaviour:
     characterIndex: 2
     initialDelay: 0
     duration: 0
-  - clip: {fileID: 8300000, guid: 0e20ccf9a51d55d47ba896bd3ec2deda, type: 3}
+  - clip: {fileID: 8300000, guid: 2cfad856c35d65c4abc3dde92ed3dee9, type: 3}
     characterIndex: 1
     initialDelay: 0
     duration: 0
   dialogScene: 0
   debugIndex: 0
+  failSequence:
+    clip: {fileID: 8300000, guid: 76b68dd113685a0498e3f5c89a3d2586, type: 3}
+    characterIndex: 1
+    initialDelay: 0
+    duration: 0
 --- !u!4 &803125526
 Transform:
   m_ObjectHideFlags: 0
@@ -1303,6 +1308,8 @@ MonoBehaviour:
   maxSecs: 9
   totalDuration: 40
   initialDelay: 20
+  failCont: 0
+  maxFails: 3
 --- !u!1 &1814123994
 GameObject:
   m_ObjectHideFlags: 0

@@ -634,7 +634,7 @@ MonoBehaviour:
   - {fileID: 1203807226}
   - {fileID: 360796706}
   audios:
-  - clip: {fileID: 8300000, guid: 689f7ea6a3a0b054bb4446be6eb83b2c, type: 3}
+  - clip: {fileID: 8300000, guid: 112815fe8db3f0d478dc9a6eec6f5c9c, type: 3}
     characterIndex: 1
     initialDelay: 10
     duration: 0
@@ -648,6 +648,11 @@ MonoBehaviour:
     duration: 10
   dialogScene: 1
   debugIndex: 0
+  failSequence:
+    clip: {fileID: 0}
+    characterIndex: 0
+    initialDelay: 0
+    duration: 0
 --- !u!4 &790909291
 Transform:
   m_ObjectHideFlags: 0

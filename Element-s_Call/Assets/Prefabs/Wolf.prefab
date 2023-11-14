@@ -226,5 +226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionSound: {fileID: 8300000, guid: 41675da0725ff8347bb7cd8171a3a942, type: 3}
   failSound: {fileID: 8300000, guid: ed1e074058704a74fa74ca88b704de79, type: 3}
+  successSounds:
+  - {fileID: 8300000, guid: 7583729ac3c0bb84386c81034a8122bb, type: 3}
   readySound: {fileID: 8300000, guid: 90ebe05105ca1f945b5c22033c77f5c9, type: 3}
   attackSound: {fileID: 8300000, guid: 089edbd98e42d874d894163a76da95a9, type: 3}

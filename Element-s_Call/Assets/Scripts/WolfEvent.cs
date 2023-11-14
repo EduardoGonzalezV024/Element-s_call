@@ -7,6 +7,7 @@ public class WolfEvent : MonoBehaviour
     private TouchController touchController;
     public AudioClip actionSound;
     public AudioClip failSound;
+    public AudioClip[] successSounds;
     public AudioClip readySound;
     public AudioClip attackSound;
 
@@ -58,12 +59,19 @@ public class WolfEvent : MonoBehaviour
         {
             Fail();
         }
+        else if (Random.Range(-1, 2) > 0)
+        {
+            GameObject.FindGameObjectWithTag("Aeris").GetComponent<AudioSource>().PlayOneShot(successSounds[(int)Random.Range(0, successSounds.Length)]);
+        }
 
         Destroy(this.gameObject, 1);
     }
     public void Fail()
     {
+        EventController cont = GameObject.FindObjectOfType<EventController>();
+
         GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>().PlayOneShot(failSound);
+        cont.Fail();
         Handheld.Vibrate();
     }
 }

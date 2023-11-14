@@ -6,7 +6,7 @@ public class EventController : MonoBehaviour
 {
     [SerializeField] GameObject spawnable;
 
-    public float minSecs, maxSecs, totalDuration, initialDelay;
+    public float minSecs, maxSecs, totalDuration, initialDelay, failCont, maxFails;
 
     void Start()
     {
@@ -15,7 +15,7 @@ public class EventController : MonoBehaviour
 
     private void Update()
     {
-        if(initialDelay == 0)totalDuration -= Time.deltaTime;
+        if(initialDelay == 0) totalDuration -= Time.deltaTime;
     }
 
     IEnumerator Event()
@@ -32,6 +32,17 @@ public class EventController : MonoBehaviour
 
         if (totalDuration > 0) StartCoroutine(Event());
 
-        else FindObjectOfType<SceneController>().nextScene();
+        else if(failCont < maxFails) FindObjectOfType<SceneController>().nextScene();
+    }
+
+    public void Fail()
+    {
+        failCont++;
+
+        if(failCont == maxFails)
+        {
+            StopCoroutine(Event());
+            FindObjectOfType<DialogController>().failSq();
+        }
     }
 }

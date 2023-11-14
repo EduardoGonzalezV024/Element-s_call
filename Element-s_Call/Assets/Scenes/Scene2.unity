@@ -605,7 +605,7 @@ MonoBehaviour:
     characterIndex: 2
     initialDelay: 0
     duration: 0
-  - clip: {fileID: 8300000, guid: 0f67c7c83052f434b8b85a3b3b06e50e, type: 3}
+  - clip: {fileID: 8300000, guid: 9f59a30dc0d49ba48b63cca1bed32f0f, type: 3}
     characterIndex: 1
     initialDelay: -3
     duration: 0
@@ -613,7 +613,7 @@ MonoBehaviour:
     characterIndex: 0
     initialDelay: 1
     duration: 0
-  - clip: {fileID: 8300000, guid: 2642b979e805a9a4aa7487692629a4c9, type: 3}
+  - clip: {fileID: 8300000, guid: ea7ac636e402d4f428f96e35d705b71a, type: 3}
     characterIndex: 1
     initialDelay: 0
     duration: 0
@@ -621,7 +621,15 @@ MonoBehaviour:
     characterIndex: 0
     initialDelay: 0
     duration: 0
-  - clip: {fileID: 8300000, guid: 9bb344a9d19b740418b6ae201ebfd9eb, type: 3}
+  - clip: {fileID: 8300000, guid: b93d82c801f84ff438287b57c58708d5, type: 3}
+    characterIndex: 1
+    initialDelay: 0
+    duration: 0
+  - clip: {fileID: 8300000, guid: 1dacab7c29ea3c84ea14709da9d7f22f, type: 3}
+    characterIndex: 0
+    initialDelay: 0
+    duration: 0
+  - clip: {fileID: 8300000, guid: fba784ef8ade17846a00547647e76e92, type: 3}
     characterIndex: 1
     initialDelay: 0
     duration: 0
@@ -629,7 +637,7 @@ MonoBehaviour:
     characterIndex: 0
     initialDelay: 0
     duration: 0
-  - clip: {fileID: 8300000, guid: aa06581bf1c70c447a1759618bfdb06f, type: 3}
+  - clip: {fileID: 8300000, guid: a4019dc9dda8c6a4abc5a5382db5beac, type: 3}
     characterIndex: 1
     initialDelay: 0
     duration: 0
@@ -637,7 +645,7 @@ MonoBehaviour:
     characterIndex: 0
     initialDelay: 0
     duration: 0
-  - clip: {fileID: 8300000, guid: f14b573b96c8088488412f811d0cfa94, type: 3}
+  - clip: {fileID: 8300000, guid: d1c556e462828f149b1cdb7e5c735ce8, type: 3}
     characterIndex: 1
     initialDelay: 0
     duration: 0

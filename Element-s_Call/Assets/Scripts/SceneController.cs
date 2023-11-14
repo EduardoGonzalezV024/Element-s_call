@@ -9,6 +9,9 @@ public class SceneController : MonoBehaviour
 
     private void Awake()
     {
+        int progress = PlayerPrefs.GetInt("levelCompleted", 0);
+        if (progress < SceneManager.GetActiveScene().buildIndex) PlayerPrefs.SetInt("levelCompleted", SceneManager.GetActiveScene().buildIndex);
+
         touchController = FindObjectOfType<TouchController>();
     }
     public void Update()
@@ -19,7 +22,7 @@ public class SceneController : MonoBehaviour
                 (Mathf.Abs(touchController.touches[1].direction.normalized.y) < Mathf.Abs(touchController.touches[1].direction.normalized.x)) &&
                 touchController.touches[0].direction.x < -30 && touchController.touches[1].direction.x < -30)
             {
-                prevScene();
+                SceneManager.LoadScene(0);
             }
         }
     }
@@ -31,6 +34,12 @@ public class SceneController : MonoBehaviour
         if (index == SceneManager.sceneCountInBuildSettings-1) index = -1;
 
         SceneManager.LoadScene(index + 1);
+    }
+    public void reloadScene()
+    {
+        int index = SceneManager.GetActiveScene().buildIndex;
+
+        SceneManager.LoadScene(index);
     }
 
     public void prevScene()

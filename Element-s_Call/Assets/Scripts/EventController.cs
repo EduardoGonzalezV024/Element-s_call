@@ -24,7 +24,7 @@ public class EventController : MonoBehaviour
 
         initialDelay = 0;
 
-        Instantiate(spawnable, this.transform);
+        if(spawnable != null)Instantiate(spawnable, this.transform);
 
         float wait = Random.Range(minSecs, maxSecs);
 

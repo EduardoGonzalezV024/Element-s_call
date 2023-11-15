@@ -51,18 +51,18 @@ public class TouchController : MonoBehaviour
                 touches[i].direction = new Vector2(0,0);
             }
 
-            RectTransform rectTransform = touchesUI[i].GetComponent<RectTransform>();
+            if (touchesUI[i] != null)
+            {
+                RectTransform rectTransform = touchesUI[i].GetComponent<RectTransform>();
 
-            Vector2 touchPosition = currentTouches[i].position;
+                Vector2 touchPosition = currentTouches[i].position;
 
-            // Convert screen coordinates to viewport coordinates
-            Vector2 viewportPosition = Camera.main.ScreenToViewportPoint(touchPosition);
+                Vector2 viewportPosition = Camera.main.ScreenToViewportPoint(touchPosition);
 
-            // Set the anchored position of the UI element based on viewport coordinates
-            rectTransform.anchorMin = viewportPosition;
-            rectTransform.anchorMax = viewportPosition;
+                rectTransform.anchorMin = viewportPosition;
+                rectTransform.anchorMax = viewportPosition;
+            }
 
-            //touchesUI[i].transform.localPosition = new Vector2(currentTouches[i].position.x - Screen.width/2, currentTouches[i].position.y - Screen.height/2);
 
             touches[i].duration += Time.deltaTime;
         }

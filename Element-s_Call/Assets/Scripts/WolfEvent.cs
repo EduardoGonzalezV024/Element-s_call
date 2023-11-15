@@ -8,6 +8,7 @@ public class WolfEvent : MonoBehaviour
     public AudioClip actionSound;
     public AudioClip failSound;
     public AudioClip[] successSounds;
+    public AudioClip hitSound;
     public AudioClip readySound;
     public AudioClip attackSound;
 
@@ -55,6 +56,10 @@ public class WolfEvent : MonoBehaviour
 
         yield return new WaitForSecondsRealtime(0.75f);
 
+        if(passes)
+        {
+            this.GetComponent<AudioSource>().PlayOneShot(hitSound, 0.75f);
+        }
         if (!passes)
         {
             Fail();

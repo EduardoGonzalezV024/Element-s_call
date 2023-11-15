@@ -1121,8 +1121,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnable: {fileID: 6082489476391272466, guid: ccc9f7091f836b94ebadfe40cec9dafd, type: 3}
-  minSecs: 6
-  maxSecs: 9
+  minSecs: 5
+  maxSecs: 8
   totalDuration: 40
   initialDelay: 13
   failCont: 0
@@ -1139,8 +1139,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6098a30dbeccb6f49a956c4a46511ba0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actionSound: {fileID: 8300000, guid: 41675da0725ff8347bb7cd8171a3a942, type: 3}
-  failSound: {fileID: 8300000, guid: ed1e074058704a74fa74ca88b704de79, type: 3}
+  actionSound: {fileID: 8300000, guid: 70b9a5acd8b1935488c98c93a0a314c9, type: 3}
+  failSound: {fileID: 8300000, guid: b9f3128b56a9462489943a3e763b81ff, type: 3}
   initialDelay: 13
   height: 20
   downSp: 3

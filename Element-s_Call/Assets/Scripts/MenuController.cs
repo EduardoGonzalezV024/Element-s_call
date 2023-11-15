@@ -5,9 +5,10 @@ using UnityEngine;
 
 public class MenuController : MonoBehaviour
 {
+    public AudioClip[] options;
     private TouchController touchController;
-    private int option = 0;
-    private float inputDelay = 0;
+    private int option = 2;
+    public float inputDelay = 0;
 
     private void Awake()
     {
@@ -30,7 +31,7 @@ public class MenuController : MonoBehaviour
             if (touchController.touches[0].direction.x > 30 && (Mathf.Abs(touchController.touches[0].direction.normalized.y) < Mathf.Abs(touchController.touches[0].direction.normalized.x))
                && inputDelay < 0)
             {
-                switch(option)
+                switch (option)
                 {
                     case 0:
                         play();
@@ -50,6 +51,7 @@ public class MenuController : MonoBehaviour
                 option++;
                 if (option == 3) option = 0;
                 inputDelay = 0.5f;
+                this.gameObject.GetComponent<AudioSource>().PlayOneShot(options[option]);
             }
         }
         inputDelay -= Time.deltaTime;

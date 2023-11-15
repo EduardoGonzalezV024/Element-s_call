@@ -30,7 +30,7 @@ public class JumpEvent : MonoBehaviour
                 {
                     inputDelay = 0.5f;
                     height += 2;
-                    GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>().PlayOneShot(actionSound);
+                    GameObject.Find("Feet").GetComponent<AudioSource>().PlayOneShot(actionSound, 0.25f);
                 }
             }
             inputDelay -= Time.deltaTime;

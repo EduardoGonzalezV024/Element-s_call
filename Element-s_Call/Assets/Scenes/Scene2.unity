@@ -601,17 +601,25 @@ MonoBehaviour:
   - {fileID: 1203807226}
   - {fileID: 51482230}
   audios:
-  - clip: {fileID: 8300000, guid: ca9c5d145cae42c41b67edb612950d87, type: 3}
-    characterIndex: 2
+  - clip: {fileID: 8300000, guid: abb66252e0ecb634c98f71e55506871b, type: 3}
+    characterIndex: 0
     initialDelay: 0
     duration: 0
-  - clip: {fileID: 8300000, guid: 9f59a30dc0d49ba48b63cca1bed32f0f, type: 3}
+  - clip: {fileID: 8300000, guid: ca9c5d145cae42c41b67edb612950d87, type: 3}
+    characterIndex: 2
+    initialDelay: -10
+    duration: 0
+  - clip: {fileID: 8300000, guid: 1203c3546b79c80459a5e672ed7e728d, type: 3}
     characterIndex: 1
     initialDelay: -3
     duration: 0
+  - clip: {fileID: 8300000, guid: 9f59a30dc0d49ba48b63cca1bed32f0f, type: 3}
+    characterIndex: 1
+    initialDelay: -2
+    duration: 0
   - clip: {fileID: 8300000, guid: 81db092086ee3de4882aceda3d313dfa, type: 3}
     characterIndex: 0
-    initialDelay: 1
+    initialDelay: 0
     duration: 0
   - clip: {fileID: 8300000, guid: ea7ac636e402d4f428f96e35d705b71a, type: 3}
     characterIndex: 1
@@ -663,6 +671,11 @@ MonoBehaviour:
     duration: 0
   dialogScene: 1
   debugIndex: 0
+  failSequence:
+    clip: {fileID: 0}
+    characterIndex: 0
+    initialDelay: 0
+    duration: 0
 --- !u!4 &790909291
 Transform:
   m_ObjectHideFlags: 0

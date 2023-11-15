@@ -631,12 +631,21 @@ MonoBehaviour:
     characterIndex: 4
     initialDelay: 0
     duration: 0
+  - clip: {fileID: 8300000, guid: abb66252e0ecb634c98f71e55506871b, type: 3}
+    characterIndex: 0
+    initialDelay: 1
+    duration: 0
   - clip: {fileID: 8300000, guid: fdc700692895e6e459dfe3610f5df3af, type: 3}
     characterIndex: 3
-    initialDelay: 0
-    duration: 0
+    initialDelay: -5
+    duration: 5
   dialogScene: 1
   debugIndex: 0
+  failSequence:
+    clip: {fileID: 0}
+    characterIndex: 0
+    initialDelay: 0
+    duration: 0
 --- !u!4 &790909291
 Transform:
   m_ObjectHideFlags: 0
